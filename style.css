@@ -19,7 +19,6 @@ html, body {
 }
 
 #left-top-left {
-    /* background-color: crimson; */
     padding: 30px;
 }
 
@@ -31,8 +30,6 @@ html, body {
 }
 
 #left-top-right {
-    /* background-color: purple; */
-    justify-self: right;
     text-align: right;
     padding-top: 20px;
 }
@@ -49,8 +46,11 @@ html, body {
     color: #333;
 } 
 
+#left-top-right i {
+    display: none;
+}
+
 #left-centre {
-    /* background-color: royalblue; */
     grid-column: 1/3;
     padding: 40px;
 }
@@ -68,7 +68,6 @@ html, body {
 }
 
 #left-bottom {
-    /* background-color: chartreuse; */
     grid-column: 1/3;
     padding: 10px;
     padding-left: 30px;
@@ -80,7 +79,6 @@ html, body {
 
 
 #right {
-    /* background-color: blueviolet; */
     grid-column: 3;
     grid-row: 1 / 4;
     padding: 40px;
@@ -117,4 +115,95 @@ html, body {
 #arrow i {
     font-size: 30px;
     font-weight: 100;
+}
+
+@media (max-width:600px) {
+    #main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 7% 30% 10% 53% ;
+    }
+
+    #left-top-left {
+        padding: 15px;
+    }
+    
+    #square {
+        height: 15px;
+        width: 15px;
+        background-color: black;
+        rotate: 45deg;
+    }
+    
+    #left-top-right {
+        padding-top: 10px;
+        padding-right: 15px;
+    }
+    
+    #left-top-right h4 {
+        display: none;
+    }
+    
+    #left-top-right h5 {
+        display: none;
+    } 
+
+    #left-top-right i {
+        display: initial;
+        font-size: 20px;
+    }
+    
+    #left-centre {
+        grid-column: 1 / 4;
+        padding: 10px 25px;
+    }
+    
+    #left-centre h1 {
+        font-size: 14vw;
+        line-height: 12vw;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #left-centre h1:nth-child(2n) {
+        text-align: center;
+    }
+    
+    #left-bottom {
+        grid-column: 1 / 4;
+        padding: 6px;
+        padding-left: 15px;
+    }
+    
+    #left-bottom p {
+        width: 100%;
+    }
+
+    #right {
+        grid-column: 1 / 4;
+        grid-row: 4;
+        padding: 20px;
+    }
+    
+    #right video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #right i {
+        display: none;
+    }
+    
+    #arrow {
+        left: 39%;
+        padding: 10px;
+        rotate: 90deg;
+    }
+    
+    #arrow i {
+        font-size: 20px;
+        font-weight: 100;
+    }
 }
